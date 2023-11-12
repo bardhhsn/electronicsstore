@@ -3,10 +3,6 @@ html {
     margin-left: -10px;
 }
 
-body {
-
-}
-
 header{
     display: flex;
     flex-direction: row;
@@ -47,10 +43,6 @@ header{
     color: white;
     text-align: center;
     font-size: 10px;
-}
-
-.top-row > p {
-    
 }
 
 .nav-bar{
@@ -100,4 +92,40 @@ a:link {
 
   a.highlight:hover {
     color: #ff0000;
+  }
+
+
+  .bgfoto{
+    background-image: url(images/bg.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center; 
+    margin-top: -20px;
+  }
+
+  .butoni_bg {
+    background-color:#599bb3;
+    border-radius:28px;
+    border:1px solid #29668f;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:17px;
+    padding:16px 31px;
+    margin-right: 55%;  
+    margin-top: 5%;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #3d768a;
+  }
+  .butoni_bg:hover {
+    background-color:#408c99;
+  }
+  .butoni_bg:active {
+    position:relative;
+    top:1px;
   }
