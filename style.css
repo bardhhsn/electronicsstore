@@ -5,6 +5,7 @@ html {
 
 body{
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color: lightgray;
 }
 
 header{
@@ -139,3 +140,17 @@ a:link {
     position:relative;
     top:1px;
   }
+
+
+
+.features{
+  display: flex;
+  justify-content: space-evenly;
+  margin: auto;
+  width: 60%;
+  padding: 10px;
+  text-align: center;
+  margin-top: 5px;
+  background-color: white;
+  font-size: 12px;
+}
