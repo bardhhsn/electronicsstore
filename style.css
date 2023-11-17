@@ -129,7 +129,6 @@ a:link {
 
   #login-txt{
     text-align: center;
-    font-size: 30px;
   }
 
   .btn-login  {
@@ -217,7 +216,7 @@ label{
 */
 .bg-gray{
   margin-top: 0px;
-  font-size: 20px;
+  font-size: 45px;
   padding: 20px;
   border-radius: 20px;
 } 
@@ -277,6 +276,16 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
   background-color: #45a049;
+}
+
+.error {
+  color: #ff0000;
+  margin-bottom: 16px;
+}
+
+.success {
+  color: #008000;
+  margin-bottom: 16px;
 }
 footer {
   background-color: #333;

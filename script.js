@@ -1,34 +1,39 @@
 function validateLoginForm() {
-    var email = document.getElementById('loginemail').value;
+    var email = document.getElementById('loginEmail').value;
     var password = document.getElementById('loginPassword').value;
 
-    if (email === "" || password === "") {
-        document.getElementById('loginError').innerHTML = "Email-i dhe passwordi jane te domosdoshem";
-        return false;
-    } else {
-
-        if (email === "email" && password === "password") {
-            document.getElementById('loginError').innerHTML = ""; 
-            alert("Ju jeni kyqur me suskses!");
-            return true;
+    // Simple validation
+    if (email === "bardhhyseni28@gmail.com" && password === "bardhi123") {
+        document.getElementById('loginError').innerHTML = "";
+        document.getElementById('loginSuccess').innerHTML = "Ju jeni kyçur me sukses!";
+        setTimeout(function () {
+            window.location.href = "index.html";
+        }, 2000);
         } else {
-            document.getElementById('loginError').innerHTML = "Email ose password eshte gabim!";
-            return false;
-        }
+        document.getElementById('loginError').innerHTML = "Email ose passwordi i dhene eshte gabim!";
+        document.getElementById('loginSuccess').innerHTML = "";
     }
+
+    // Prevent the form from submitting and refreshing the page
+    return false;
 }
 
 function validateSignupForm() {
-    var email = document.getElementById('signupemail').value;
+    var email = document.getElementById('signupEmail').value;
     var password = document.getElementById('signupPassword').value;
 
     // Simple validation
-    if (email === "" || password === "") {
-        document.getElementById('signupError').innerHTML = "Email-i dhe passwordi jane te domosdoshem";
-        return false;
+    if (email === "bardhhyseni28@gmail.com" && password === "bardhi123") {
+        document.getElementById('signupError').innerHTML = "";
+        document.getElementById('signupSuccess').innerHTML = "Ju jeni regjistruar me sukses!";
+        setTimeout(function () {
+            window.location.href = "index.html";
+        }, 2000);
     } else {
-        // You can add more sophisticated validation here, such as checking if the email is unique.
-        alert("Ju jeni regjistruar me sukses!");
-        return true;
+        document.getElementById('signupError').innerHTML = "Email ose passwordi i dhene eshte gabim!";
+        document.getElementById('signupSuccess').innerHTML = "";
     }
+
+    // Prevent the form from submitting and refreshing the page
+    return false;
 }

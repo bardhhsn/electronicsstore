@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log In | PULSE Electronics</title>
+    <title>Regjistrohu | PULSE Electronics</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 </head>
@@ -24,18 +24,18 @@
 </header>
     
  <div class="form center">
-      <form id="signupForm" onsubmit="return validateForm()">
+      <form id="signupForm" onsubmit="return validateSignupForm()">
         <div id="login-txt">
-        <h1 class="white-text bg-gray"> Sign Up</h1>
+        <h1 class="white-text bg-gray"> Regjistrohu</h1>
         </div>  
         <label for="name">Emri dhe mbiemri juaj:</label>
         <input type="text" id="name" name="name" required>
         <br>
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+        <input type="email" id="signupEmail" name="signupEmail" required>
         <br>
         <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
+        <input type="password" id="signupPassword" name="signupPassword" required>
         <br>
         <input type="submit" value="Sign Up">
         <p id="signupError" class="error"></p>
