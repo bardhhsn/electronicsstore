@@ -192,7 +192,10 @@ a:link {
   margin-top: 10px;
   align-items: center;
 }
-
+.produkti img {
+  width: 100%; /* Make the image fill its container */
+  height: auto;
+}
 label{
   color: white;
 }
