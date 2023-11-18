@@ -180,7 +180,7 @@ a:link {
 
 .produkti {
   background-color: #f2f2f2;
-  padding: 40px;
+  padding: 20px;
   text-align: center;
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 4 columns per row */
@@ -191,10 +191,20 @@ a:link {
   margin-top: 10px;
   align-items: center;
   font-size: 80%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  
 }
 .produkti img {
-  width: 200px; /* Make the image fill its container */
-  height: 200px;
+  width: 180px; /* Make the image fill its container */
+  height: 180px;
+}
+.produkti div {
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #fff;
 }
 label{
   color: white;
