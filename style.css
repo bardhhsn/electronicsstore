@@ -180,20 +180,21 @@ a:link {
 
 .produkti {
   background-color: #f2f2f2;
-  padding: 20px;
+  padding: 40px;
   text-align: center;
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 4 columns per row */
-  grid-gap: 20px;
+  grid-gap: 30px;
   margin: 0 auto;
   width: 60%;
   padding: 10px;
   margin-top: 10px;
   align-items: center;
+  font-size: 80%;
 }
 .produkti img {
-  width: 100%; /* Make the image fill its container */
-  height: auto;
+  width: 200px; /* Make the image fill its container */
+  height: 200px;
 }
 label{
   color: white;
