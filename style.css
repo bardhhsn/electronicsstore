@@ -180,14 +180,13 @@ a:link {
 
 .produkti {
   background-color: #f2f2f2;
-  padding: 20px;
-  text-align: center;
+  padding: 10px;
+  text-align: left;
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 4 columns per row */
   grid-gap: 30px;
   margin: 0 auto;
   width: 60%;
-  padding: 10px;
   margin-top: 10px;
   font-size: 80%;
   display: grid;
@@ -195,12 +194,26 @@ a:link {
   gap: 20px;
   
 }
+.ribbon{
+  background-color: #0096FF;
+  width: fit-content;
+  padding: 5px;
+  color: white;
+}
+
+hr{
+  width: 20px;
+  text-align: left;
+  font-weight: bold;
+}
+.produkti-titull{
+  text-align: left;
+}
 .produkti img {
   width: 180px; /* Make the image fill its container */
   height: 180px;
 }
 .produkti div {
-  text-align: center;
   padding: 10px;
   border: 1px solid #ccc;
   background-color: #fff;
@@ -213,17 +226,6 @@ label{
   color: white;
 }
 
-/* form{
-  font-size: 20px;
-  text-align: left;
-  border: 3px solid lightgray;
-  border-radius: 20px;
-  padding: 50px;
-  padding-top: 0;
-  padding-left: 5px;
-  margin-top: 50px;
-}
-*/
 .bg-gray{
   margin-top: 0px;
   font-size: 45px;
