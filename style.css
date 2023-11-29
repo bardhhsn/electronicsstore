@@ -226,7 +226,7 @@ hr{
 }
 
 .product-card {
-  display: flex;
+  display: block;
   flex-direction: column;
   background-color: #fff;
   padding: 30px;
@@ -387,3 +387,22 @@ h5 {
 }
 
 
+.cat-button {
+	background-color:transparent;
+  border: 0;
+	display:inline-block;
+	cursor:pointer;
+	color:#000000;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+}
+.cat-button:hover {
+	background-color:transparent;
+}
+.cat-button:active {
+	position:relative;
+	top:1px;
+}

@@ -42,30 +42,25 @@
     <!-- NAV BAR END -->
 
     <main>
-        <div class="bgfoto">
-            <div class="bgteksti">
-                <h1> <span style="color: red;">Black Friday</span> <br> Deals</h1>
-                <p style="font-size: 15px; padding-bottom: 20px; font-weight: lighter;">Lehtëso studimet tuaja përmes llaptopit.</p>
-                <button class="butoni_bg"><a href="#">Blej tani</a></button>
-            </div>
+        <div>
+            <h1 style="text-align: center;">Te gjitha produktet</h1>
         </div>
-
-        <!-- Features START -->
-        <section>
-        <div class="features">
-            <h4>Transport falas ne te gjithe Kosoven</h3>
-            <h4>Çmime konkurruese</h3>
-            <h4>Ndihme ndaj juve 24/7</h3>
-        </div>
-        </section>
-        <!-- FEATURES END -->
         
         <!-- PRODUCT START -->
         <container>  
         <div class="container">
+
+          <div class="categories">
+            <h4 style="text-decoration: underline;">Kategorite</h4>
+            <button class="cat-button" onclick="filterProducts('all')">Te gjitha</button>
+            <button class="cat-button" onclick="filterProducts('laptop')">Laptop</button>
+            <button class="cat-button" onclick="filterProducts('kompjuter')">Kompjuter</button>
+            <button class="cat-button" onclick="filterProducts('monitor')">Monitor</button>
+
+          </div>
             <div class="product-grid" id="productList">
               <!-- Product 1 -->
-              <div class="product-card">
+              <div class="product-card" data-category="kompjuter">
                 <img class="product-image" src="images/p1.png" alt="Product 1">
                 <div class="product-title">Apple iMac Late 2013 21.5",i5 4570s, 8GB RAM,1TB HDD, Intel Iris Graphics 1.5GB</div>
                 <hr>
@@ -74,7 +69,7 @@
               </div>
         
               <!-- Product 2 -->
-              <div class="product-card">
+              <div class="product-card" data-category="laptop">
                 <img class="product-image" src="images/p2.png" alt="Product 2">
                 <div class="product-title">DELL Latitude E7280, i5 6300U, 8GB RAM, 256GB SSD, 12.5" FHD</div>
                 <hr>
@@ -83,7 +78,7 @@
               </div>
         
               <!-- Product 3 -->
-              <div class="product-card">
+              <div class="product-card" data-category="kompjuter">
                 <img class="product-image" src="images/p3.png" alt="Product 3">
                 <div class="product-title">DELL OptiPlex 9020 AIO, i7 4770s, 8GB RAM, 256GB SSD, Radeon 8700M 2GB, 23"FHD</div>
                 <hr>
@@ -92,7 +87,7 @@
               </div>
         
               <!-- Product 4 -->
-              <div class="product-card">
+              <div class="product-card" data-category="laptop">
                 <img class="product-image" src="images/p4.png" alt="Product 4">
                 <div class="product-title">HP OMEN 15, Ryzen 7 4800 H, 16GB RAM, 512GB SSD, GTX 1660 TI 6GB, 15.6" 144Hz</div>
                 <hr>
@@ -100,14 +95,14 @@
                 <div class="product-price">$1.199,00</div>
               </div>
               <!-- Product 5 -->
-              <div class="product-card">
+              <div class="product-card" data-category="laptop">
                 <img class="product-image" src="images/p5.png" alt="Product 5">
                 <div class="product-title">HP EliteBook 840 G5, i5 8250U, 8GB RAM, 256GB SSD, 14" FHD</div>
                 <div class="product-discount">$399,00</div>
                 <div class="product-price">$329,00</div>
               </div>
                <!-- Product 6 -->
-               <div class="product-card">
+               <div class="product-card" data-category="laptop">
                 <img class="product-image" src="images/p6.png" alt="Product 6">
                 <div class="product-title">HP EliteBook 1020x360, i5 7300U, 8GB RAM, 256GB SSD, 12.5" FHD</div>
                 <hr>
@@ -115,7 +110,7 @@
                 <div class="product-price">$259,00</div>
               </div>
                <!-- Product 7 -->
-               <div class="product-card">
+               <div class="product-card" data-category="laptop">
                 <img class="product-image" src="images/p7.png" alt="Product 7">
                 <div class="product-title">Lenovo ThinkPad Yoga 6, Ryzen 5 5500U, 8GB RAM, 512GB SSD, 13.3" FHD</div>
                 <hr>
@@ -123,7 +118,7 @@
                 <div class="product-price">$649,00</div>
               </div>
               <!-- Product 8 -->
-              <div class="product-card">
+              <div class="product-card" data-category="monitor">
                 <img class="product-image" src="images/p8.png" alt="Product 8">
                 <div class="product-title">Lenovo ThinkVision T2254p 22'' LED-Backlit LCD Monitor</div>
                 <hr>
@@ -131,7 +126,7 @@
                 <div class="product-price">$€59,00</div>
               </div>
               <!-- Product 9 -->
-              <div class="product-card">
+              <div class="product-card" data-category="laptop">
                 <img class="product-image" src="images/p9.png" alt="Product 9">
                 <div class="product-title">Lenovo ThinkPad Yoga 12 2-in-1, i5 4300U, 8GB RAM, 256GB SSD, 12.5" FHD</div>
                 <hr>
@@ -139,7 +134,7 @@
                 <div class="product-price">$215,00</div>
               </div>
               <!-- Product 10 -->
-              <div class="product-card">
+              <div class="product-card" data-category="monitor">
                 <img class="product-image" src="images/p10.png" alt="Product 10">
                 <div class="product-title">Lenovo ThinkVision LT2252p 22" (inch) LED LCD Monitor</div>
                 <hr>
@@ -147,7 +142,7 @@
                 <div class="product-price">$59,00</div>
               </div>
               <!-- Product 11 -->
-              <div class="product-card">
+              <div class="product-card" data-category="monitor">
                 <img class="product-image" src="images/p11.png" alt="Product 11">
                 <div class="product-title">Dell U2713HM 27-Inch Screen LED-lit Monitor</div>
                 <hr>
@@ -155,39 +150,39 @@
                 <div class="product-price">$199,00</div>
               </div>
               <!-- Product 12 -->
-              <div class="product-card">
+              <div class="product-card" data-category="laptop">
                 <img class="product-image" src="images/p12.png" alt="Product 12">
                 <div class="product-title">HP OMEN 15, Ryzen 7 5800H, 16GB RAM, 1TB SSD, RTX 3070 8GB, 15.6" 144Hz</div>
                 <hr>
                 <div class="product-discount">$1.499,00</div>
                 <div class="product-price">$1.349,00</div>
               </div>
-              <!-- Product 10 -->
-              <div class="product-card">
+              <!-- Product 13 -->
+              <div class="product-card" data-category="kompjuter">
                 <img class="product-image" src="images/p13.png" alt="Product 13">
                 <div class="product-title">Dell OptiPlex 7040 SFF PC, i7-6700 up to 4.0GHz, 16GB RAM, 256GB SSD</div>
                 <hr>
                 <div class="product-discount">$359,00</div>
                 <div class="product-price">$279,00</div>
               </div>
-              <!-- Product 10 -->
-              <div class="product-card">
+              <!-- Product 14 -->
+              <div class="product-card" data-category="kompjuter">
                 <img class="product-image" src="images/p14.png" alt="Product 14">
                 <div class="product-title">HP 800 G3 SFF, i5 6500, 8GB RAM, 256GB SSD, Intel HD Graphics</div>
                 <hr>
                 <div class="product-discount">$299,00</div>
                 <div class="product-price">$189,00</div>
               </div>
-              <!-- Product 10 -->
-              <div class="product-card">
+              <!-- Product 15 -->
+              <div class="product-card" data-category="laptop">
                 <img class="product-image" src="images/p15.png" alt="Product 15">
                 <div class="product-title">HP EliteBook 1040 G3, i5 6300U, 8GB RAM, 512GB SSD, 14" FHD</div>
                 <hr>
                 <div class="product-discount">$299,00</div>
                 <div class="product-price">$199,00</div>
               </div>
-              <!-- Product 10 -->
-              <div class="product-card">
+              <!-- Product 16 -->
+              <div class="product-card" data-category="kompjuter">
                 <img class="product-image" src="images/p16.png" alt="Product 16">
                 <div class="product-title">HP Elite Tower 800 G9, i7 12700, 16GB RAM DDR4, 256GB SSD, Intel HD Graphics</div>
                 <hr>
@@ -231,6 +226,21 @@
     </div>
     </footer>
     <!-- FOOTER END -->
+    <script>
+      function filterProducts(category) {
+          const products = document.querySelectorAll('.product-card');
+  
+          products.forEach(product => {
+              const productCategory = product.getAttribute('data-category');
+  
+              if (category === 'all' || productCategory === category) {
+                  product.style.display = 'block';
+              } else {
+                  product.style.display = 'none';
+              }
+          });
+      }
+  </script>
 </main>
 </body>
 </html>

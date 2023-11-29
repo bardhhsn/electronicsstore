@@ -37,3 +37,5 @@ function validateSignupForm() {
     // Prevent the form from submitting and refreshing the page
     return false;
 }
+
+
