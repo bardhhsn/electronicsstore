@@ -6,6 +6,12 @@ html {
 body{
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   background-color: lightgray;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  }
+
+  body.loaded {
+    opacity: 1;
 }
 
 @media screen and (max-width: 700px) {
@@ -159,26 +165,19 @@ li{
 .slick-prev:before, .slick-next:before {
     content: '';
     display: inline-block;
-    background: url('images/arrows.png') no-repeat; /* Replace with your arrow images */
     background-size: contain;
     width: 30px;
     height: 30px;
 }
-  .butoni_bg  {
-    background-color:#599bb3;
-    border-radius:28px;
-    border:1px solid #29668f;
-    display:inline-block;
-    cursor:pointer;
-    color:#ffffff;
-    font-family:Arial;
-    font-size:17px;
-    padding:16px 31px;
-    text-decoration:none;
-    text-shadow:0px 1px 0px #3d768a;
-    
-  }
 
+.col li a {
+  text-decoration: none;
+}
+
+.col a:hover{
+  color: black;
+  text-decoration: underline;
+}
   #login-txt{
     text-align: center;
   }
