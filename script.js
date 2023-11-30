@@ -19,24 +19,25 @@ function validateLoginForm() {
 }
 
 function validateSignupForm() {
-    var email = document.getElementById('signupEmail').value;
-    var password = document.getElementById('signupPassword').value;
+  var email = document.getElementById('signupEmail').value;
+  var password = document.getElementById('signupPassword').value;
 
-    // Simple validation
-    if (email === "bardhhyseni28@gmail.com" && password === "bardhi123") {
-        document.getElementById('signupError').innerHTML = "";
-        document.getElementById('signupSuccess').innerHTML = "Ju jeni regjistruar me sukses!";
-        setTimeout(function () {
-            window.location.href = "index.html";
-        }, 2000);
-    } else {
-        document.getElementById('signupError').innerHTML = "Email ose passwordi i dhene eshte gabim!";
-        document.getElementById('signupSuccess').innerHTML = "";
-    }
+  // Simple validation
+  if (email && password) {
+      document.getElementById('signupError').innerHTML = "";
+      document.getElementById('signupSuccess').innerHTML = "Ju jeni regjistruar me sukses!";
+      setTimeout(function () {
+          window.location.href = "login.html";
+      }, 2000);
+  } else {
+      document.getElementById('signupError').innerHTML = "Ju lutem shkruani email-in dhe passwordin.";
+      document.getElementById('signupSuccess').innerHTML = "";
+  }
 
-    // Prevent the form from submitting and refreshing the page
-    return false;
+  // Prevent the form from submitting and refreshing the page
+  return false;
 }
+
 
 document.addEventListener("DOMContentLoaded", function() {
     document.body.classList.add('loaded');
