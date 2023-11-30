@@ -230,19 +230,27 @@ hr{
   flex-direction: column;
   background-color: #fff;
   padding: 30px;
-  text-align: center;
   align-items: center;
-  border: 1px solid black;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
   width: 60%;
   height: 80%;
 }
 
+.product-card:hover{
+  transform: scale(1.05);
+
+}
 .product-image {
   display: flex;
   justify-content: center;
-  max-width: 120%;
-  align-items: center;
-  margin-bottom: 10px;
+  max-width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ddd;
 }
 
 .product-title {
@@ -250,15 +258,19 @@ hr{
   margin-bottom: 10px;
   font-size: 11px;
   text-align: left;
+  height: 18%;
+  
 }
 
 .product-discount {
   text-decoration:line-through;
   color: #333;
   font-weight: bold;
+  text-align: center;
 }
 .product-price {
   color: #333;
+  text-align: center;
 }
 
 label{
@@ -269,12 +281,35 @@ label{
   color: white;
 }
 
+.title-width{
+  height: 25%;
+}
+
 .bg-gray{
   margin-top: 0px;
   font-size: 45px;
   padding: 20px;
   border-radius: 20px;
 } 
+.addtocart{
+  margin-top: 20px;
+  text-align: center;
+}
+.btn-addtocart {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 10px 8px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 12px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn-addtocart:hover{
+  background-color: #45a049;
+}
+
 
 form {
   margin-top: 50px;
