@@ -171,6 +171,41 @@ li{
     height: 30px;
 }
 
+#cart-window {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+#close-window {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+#cart-window span{
+  text-align: left;
+}
+
+.remove-item {
+  cursor: pointer;
+  color: red;
+}
+
 .col li a {
   text-decoration: none;
 }

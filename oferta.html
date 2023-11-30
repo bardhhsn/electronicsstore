@@ -38,11 +38,19 @@
            <li> <a href="kompjuter.html" class="nav-btn">Kompjuter</a></li>
            <li> <a href="oferta.html" class="nav-btn">Oferta</a></li>
            <li> <a href="kontakti.html" class="nav-btn">Kontakti</a></li>
-           <li><button class="btn-login" onclick="openCart()"><i class="fas fa-shopping-cart"></i></button></li>
+           <li><button class="btn-login" onclick="openCartModal()"><i class="fas fa-shopping-cart"></i></button></li>
         </ul>
     </div>
     </nav>
     <!-- NAV BAR END -->
+    <!-- CART START -->
+    <div id="cart-window">
+      <span id="close-window" onclick="closeCartModal()">X</span>
+      <h2>Shopping Cart</h2>
+      <ul id="cart-items">
+      </ul>
+      <p>Total: $<span id="cart-total">0</span></p>
+    </div>
 
     <main>
         <div>
@@ -61,8 +69,8 @@
                 <div class="product-discount">€239,00</div>
                 <div class="product-price">€159,00</div>
                 <div class="addtocart">
-                  <a href="produktet/p2.html"> <button class="btn-addtocart">Shto ne shporte</button></a>
-                 </div>
+                  <button class="btn-addtocart" onclick="addToCart('DELL Latitude E7280', 159)"><i class="fa-solid fa-cart-shopping"></i> &nbsp;Shto ne shporte</button>
+                </div>
               </div>
                <!-- Product 3 -->
                <div class="product-card" data-category="kompjuter">
@@ -72,7 +80,7 @@
                 <div class="product-discount">€269,00</div>
                 <div class="product-price">€199,00</div>
                 <div class="addtocart">
-                  <a href="produktet/p3.html"> <button class="btn-addtocart">Shto ne shporte</button></a>
+                  <button class="btn-addtocart" onclick="addToCart('DELL OptiPlex 9020 AIO', 199)"><i class="fa-solid fa-cart-shopping"></i> &nbsp;Shto ne shporte</button>
                  </div>
               </div>
               <!-- Product 4 -->
@@ -83,7 +91,7 @@
                 <div class="product-discount">€1.349,00</div>
                 <div class="product-price">€1.199,00</div>
                 <div class="addtocart">
-                  <a href="produktet/p4.html"> <button class="btn-addtocart">Shto ne shporte</button></a>
+                  <button class="btn-addtocart" onclick="addToCart('HP OMEN 15', 1190)"><i class="fa-solid fa-cart-shopping"></i> &nbsp;Shto ne shporte</button>
                  </div>
               </div>
               <!-- Product 5 -->
@@ -94,7 +102,7 @@
                 <div class="product-discount">€399,00</div>
                 <div class="product-price">€329,00</div>
                 <div class="addtocart">
-                  <a href="produktet/p5.html"> <button class="btn-addtocart">Shto ne shporte</button></a>
+                  <button class="btn-addtocart" onclick="addToCart('HP EliteBook 840 G5', 329)"><i class="fa-solid fa-cart-shopping"></i> &nbsp;Shto ne shporte</button>
                  </div>
               </div>
                <!-- Product 6 -->
@@ -105,7 +113,7 @@
                 <div class="product-discount">€339,00</div>
                 <div class="product-price">€259,00</div>
                 <div class="addtocart">
-                  <a href="produktet/p6.html"> <button class="btn-addtocart">Shto ne shporte</button></a>
+                  <button class="btn-addtocart" onclick="addToCart('HP EliteBook 1020x360', 259)"><i class="fa-solid fa-cart-shopping"></i> &nbsp;Shto ne shporte</button>
                  </div>
               </div>
                <!-- Product 14 -->
@@ -116,7 +124,7 @@
                 <div class="product-discount">€299,00</div>
                 <div class="product-price">€189,00</div>
                 <div class="addtocart">
-                  <a href="produktet/p14.html"> <button class="btn-addtocart">Shto ne shporte</button></a>
+                  <button class="btn-addtocart" onclick="addToCart('HP 800 G3 SFF', 189)"><i class="fa-solid fa-cart-shopping"></i> &nbsp;Shto ne shporte</button>
                  </div>
               </div>
               <!-- Product 15 -->
@@ -127,7 +135,7 @@
                 <div class="product-discount">€299,00</div>
                 <div class="product-price">€199,00</div>
                 <div class="addtocart">
-                  <a href="produktet/p15.html"> <button class="btn-addtocart">Shto ne shporte</button></a>
+                  <button class="btn-addtocart" onclick="addToCart('HP EliteBook 1040 G3', 199)"><i class="fa-solid fa-cart-shopping"></i> &nbsp;Shto ne shporte</button>
                  </div>
               </div>
             </div>
@@ -172,6 +180,56 @@
             document.body.classList.add('loaded');
         });
     </script>
+    <script>
+      // Shopping cart data
+      const cart = [];
+  
+      function addToCart(product, price) {
+        cart.push({ product, price });
+        updateCart();
+        openCartModal();
+      }
+  
+      function removeFromCart(index) {
+        cart.splice(index, 1);
+        updateCart();
+      }
+  
+      function updateCart() {
+        const cartItems = document.getElementById('cart-items');
+        const cartTotal = document.getElementById('cart-total');
+  
+        cartItems.innerHTML = '';
+  
+        cart.forEach((item, index) => {
+          const li = document.createElement('li');
+          li.classList.add('cart-item');
+          li.innerHTML = `
+            <span>${item.product} - $${item.price}</span>
+            <span class="remove-item" onclick="removeFromCart(${index})"> &nbsp; Fshij</span>
+          `;
+          cartItems.appendChild(li);
+        });
+  
+        const total = cart.reduce((sum, item) => sum + item.price, 0);
+        cartTotal.textContent = total;
+      }
+  
+      function openCartModal() {
+        const modal = document.getElementById('cart-window');
+        modal.style.display = 'block';
+      }
+  
+      function closeCartModal() {
+        const modal = document.getElementById('cart-window');
+        modal.style.display = 'none';
+      }
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+          document.body.classList.add('loaded');
+      });
+  </script>
 </main>
 </body>
 </html>

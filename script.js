@@ -41,3 +41,44 @@ function validateSignupForm() {
 document.addEventListener("DOMContentLoaded", function() {
     document.body.classList.add('loaded');
 });
+
+const cart = [];
+
+    // Function to add an item to the cart
+    function addToCart(product, price) {
+      cart.push({ product, price });
+      updateCart();
+      openCartModal();
+    }
+
+    // Function to update the cart display
+    function updateCart() {
+      const cartItems = document.getElementById('cart-items');
+      const cartTotal = document.getElementById('cart-total');
+
+      // Clear existing cart items
+      cartItems.innerHTML = '';
+
+      // Populate cart items
+      cart.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = `${item.product} - $${item.price}`;
+        cartItems.appendChild(li);
+      });
+
+      // Calculate and display total
+      const total = cart.reduce((sum, item) => sum + item.price, 0);
+      cartTotal.textContent = total;
+    }
+
+    // Function to open the cart modal
+    function openCartModal() {
+      const modal = document.getElementById('cart-modal');
+      modal.style.display = 'block';
+    }
+
+    // Function to close the cart modal
+    function closeCartModal() {
+      const modal = document.getElementById('cart-modal');
+      modal.style.display = 'none';
+    }
