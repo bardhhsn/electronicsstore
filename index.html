@@ -6,14 +6,18 @@
     <title>PULSE Electronics</title>
     
     <link rel="stylesheet" href="style.css">
+    <link rel="js" href="script.js">
     <link rel="shortcut icon" type="images/ico" href="images/icons/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <script src="https://kit.fontawesome.com/54a60ea0fd.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
     <div class="top-row">
-           <p> <a href="tel:+38345755000" class="nav-btn">+383 (0) 45 755 000</a></p>
-            <p>Dergesa falas ne te gjithe Kosoven</p>
-            <p> <a href="mailto:info@pulse-ks.com" class="nav-btn">info@pulse-ks.com</a></p>
+           <p> <a href="tel:+38345755000" class="nav-btn"><i class="fa-solid fa-phone-volume"></i> &nbsp; +383 (0) 45 755 000</a></p>
+            <p><i class="fa-solid fa-truck"></i> &nbsp; Dergesa falas ne te gjithe Kosoven</p>
+            <p> <a href="mailto:info@pulse-ks.com" class="nav-btn"><i class="fa-solid fa-envelope"></i> &nbsp; info@pulse-ks.com</a></p>
     </div>
 
     <header>
@@ -42,20 +46,19 @@
     <!-- NAV BAR END -->
 
     <main>
-        <div class="bgfoto">
-            <div class="bgteksti">
-                <h1> <span style="color: red;">Black Friday</span> <br> Deals</h1>
-                <p style="font-size: 15px; padding-bottom: 20px; font-weight: lighter;">Lehtëso studimet tuaja përmes llaptopit.</p>
-                <button class="butoni_bg"><a href="#">Blej tani</a></button>
-            </div>
-        </div>
+          <div class="slider">
+              <div><img src="images/slider1.png" alt=""></div>
+              <div><img src="images/slider2.png" alt=""></div>
+              <div><img src="images/slider3.png" alt=""></div>
+          </div>
+
 
         <!-- Features START -->
         <section>
         <div class="features">
-            <h4>Transport falas ne te gjithe Kosoven</h3>
-            <h4>Çmime konkurruese</h3>
-            <h4>Ndihme ndaj juve 24/7</h3>
+            <h4><i class="fa-solid fa-truck"></i>Transport falas ne te gjithe Kosoven</h3>
+            <h4> <i class="fa-solid fa-money-bill-1-wave"></i> Çmime konkurruese</h3>
+            <h4><i class="fa-solid fa-clock"></i>Ndihme ndaj juve 24/7</h3>
         </div>
         </section>
         <!-- FEATURES END -->
@@ -281,5 +284,18 @@
     </footer>
     <!-- FOOTER END -->
 </main>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.slider').slick({
+                autoplay: true,
+                autoplaySpeed: 2000, 
+                dots: true,
+                arrows: true,
+                appendDots: $('.slider'), 
+            });
+        });
+    </script>
 </body>
 </html>
