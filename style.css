@@ -5,7 +5,7 @@ html {
 
 body{
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  background-color: lightgray;
+  background-color: #edecec;
   opacity: 0;
   transition: opacity 0.8s ease-in-out;
   }
@@ -268,7 +268,7 @@ hr{
   justify-content: space-between;
   align-items: center;
   grid-template-columns: repeat(4, 1fr);
-  background-color: lightgray;
+  background-color: #edecec;
   justify-content: center;
   margin-top: 5px;
 }
@@ -307,7 +307,7 @@ hr{
   font-size: 11px;
   text-align: left;
   height: 18%;
-  
+
 }
 
 .product-discount {
@@ -358,6 +358,33 @@ label{
   background-color: #45a049;
 }
 
+.kontakti{
+  display: flex;
+  justify-content: left;
+  margin: auto;
+  width: 60%;
+  padding: 10px;
+  margin-top: 5px;
+  font-size: 18px;
+  height: auto;
+}
+
+
+.kontakti-left{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.kontakti-right{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.kontakti p {
+  font-size: 14px;
+}
 
 form {
   margin-top: 50px;
@@ -399,9 +426,6 @@ input[type="radio"] {
   margin-right: 8px;
 }
 
-textarea {
-  resize: vertical;
-}
 
 input[type="submit"] {
   background-color: #4caf50;
@@ -424,6 +448,15 @@ input[type="submit"]:hover {
 .success {
   color: #008000;
   margin-bottom: 16px;
+}
+
+#successMessage {
+  margin-top: 20px;
+  color: green;
+}
+
+.hidden {
+  display: none;
 }
 footer {
   display: flex;
