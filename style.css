@@ -334,7 +334,7 @@ hr{
   overflow: hidden;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
-  width: 60%;
+  width: 70%;
   height: 80%;
 }
 
@@ -388,20 +388,35 @@ label{
   padding: 20px;
   border-radius: 20px;
 } 
-.addtocart{
-  margin-top: 20px;
-  text-align: center;
-}
+.btn-learnmore,
 .btn-addtocart {
+  margin-top: 10px;
+  display: inline-block;
   background-color: #4caf50;
   color: #fff;
   border: none;
-  padding: 10px 8px;
+  padding: 8px 6px;
   cursor: pointer;
   border-radius: 4px;
   font-size: 12px;
   transition: background-color 0.3s ease-in-out;
+  
 }
+.btn-addtocart{
+  margin-right: 5px;
+}
+
+
+.addtocart {
+  display: flex;
+  align-items: flex-end;
+}
+
+
+.btn-learnmore {
+  margin-right: 5px; 
+}
+
 
 .btn-addtocart:hover{
   background-color: #45a049;
