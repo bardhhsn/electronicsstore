@@ -56,104 +56,155 @@
             <h1 style="text-align: center;">Te gjitha produktet</h1>
         </div>
         
-        <!-- PRODUCT START -->
-        <container>  
-        <div class="container">
-            <div class="product-grid" id="productList">
-              <!-- Product 2 -->
-              <div class="product-card" data-category="laptop">
-                <img class="product-image" src="images/p2.png" alt="Product 2">
-                <div class="product-title title-width">DELL Latitude E7280, i5 6300U, 8GB RAM, 256GB SSD, 12.5" FHD</div>
-                <hr>
-                <div class="product-discount">€239,00</div>
-                <div class="product-price">€159,00</div>
-                <div class="addtocart">
-                  <a href="produktet/p2.html"> <button class="btn-addtocart">Shto ne shporte</button></a>
-                 </div>
-              </div>
-              <!-- Product 4 -->
-              <div class="product-card" data-category="laptop">
-                <img class="product-image" src="images/p4.png" alt="Product 4">
-                <div class="product-title title-width">HP OMEN 15, Ryzen 7 4800 H, 16GB RAM, 512GB SSD, GTX 1660 TI 6GB, 15.6" 144Hz</div>
-                <hr>
-                <div class="product-discount">€1.349,00</div>
-                <div class="product-price">€1.199,00</div>
-                <div class="addtocart">
-                  <a href="produktet/p4.html"> <button class="btn-addtocart">Shto ne shporte</button></a>
-                 </div>
-              </div>
-              <!-- Product 5 -->
-              <div class="product-card" data-category="laptop">
-                <img class="product-image" src="images/p5.png" alt="Product 5">
-                <div class="product-title title-width">HP EliteBook 840 G5, i5 8250U, 8GB RAM, 256GB SSD, 14" FHD</div>
-                <hr>
-                <div class="product-discount">€399,00</div>
-                <div class="product-price">€329,00</div>
-                <div class="addtocart">
-                  <a href="produktet/p5.html"> <button class="btn-addtocart">Shto ne shporte</button></a>
-                 </div>
-              </div>
-               <!-- Product 6 -->
-               <div class="product-card" data-category="laptop">
-                <img class="product-image" src="images/p6.png" alt="Product 6">
-                <div class="product-title title-width">HP EliteBook 1020x360, i5 7300U, 8GB RAM, 256GB SSD, 12.5" FHD</div>
-                <hr>
-                <div class="product-discount">€339,00</div>
-                <div class="product-price">€259,00</div>
-                <div class="addtocart">
-                  <a href="produktet/p6.html"> <button class="btn-addtocart">Shto ne shporte</button></a>
-                 </div>
-              </div>
-               <!-- Product 7 -->
-               <div class="product-card" data-category="laptop">
-                <img class="product-image" src="images/p7.png" alt="Product 7">
-                <div class="product-title title-width">Lenovo ThinkPad Yoga 6, Ryzen 5 5500U, 8GB RAM, 512GB SSD, 13.3" FHD</div>
-                <hr>
-                <div class="product-discount">€749,00 </div>
-                <div class="product-price">€649,00</div>
-                <div class="addtocart">
-                  <a href="produktet/p7.html"> <button class="btn-addtocart">Shto ne shporte</button></a>
-                 </div>
-              </div>
-              <!-- Product 9 -->
-              <div class="product-card" data-category="laptop">
-                <img class="product-image" src="images/p9.png" alt="Product 9">
-                <div class="product-title title-width">Lenovo ThinkPad Yoga 12 2-in-1, i5 4300U, 8GB RAM, 256GB SSD, 12.5" FHD</div>
-                <hr>
-                <div class="product-discount">€279,00</div>
-                <div class="product-price">€215,00</div>
-                <div class="addtocart">
-                  <a href="produktet/p9.html"> <button class="btn-addtocart">Shto ne shporte</button></a>
-                 </div>
-              </div>
-              <!-- Product 12 -->
-              <div class="product-card" data-category="laptop">
-                <img class="product-image" src="images/p12.png" alt="Product 12">
-                <div class="product-title title-width">HP OMEN 15, Ryzen 7 5800H, 16GB RAM, 1TB SSD, RTX 3070 8GB, 15.6" 144Hz</div>
-                <hr>
-                <div class="product-discount">€1.499,00</div>
-                <div class="product-price">€1.349,00</div>
-                <div class="addtocart">
-                  <a href="produktet/p12.html"> <button class="btn-addtocart">Shto ne shporte</button></a>
-                 </div>
-              </div>
-              <!-- Product 15 -->
-              <div class="product-card" data-category="laptop">
-                <img class="product-image" src="images/p15.png" alt="Product 15">
-                <div class="product-title title-width">HP EliteBook 1040 G3, i5 6300U, 8GB RAM, 512GB SSD, 14" FHD</div>
-                <hr>
-                <div class="product-discount">€299,00</div>
-                <div class="product-price">€199,00</div>
-                <div class="addtocart">
-                  <a href="produktet/p15.html"> <button class="btn-addtocart">Shto ne shporte</button></a>
-                 </div>
+         <!-- PRODUCT START -->
+         <container>  
+          <div class="container">
+              <div class="product-grid" id="productList">
+                <!-- Product 2 -->
+                <div class="product-card">
+                  <img class="product-image" src="images/p2.png" alt="Product 2">
+                  <div class="product-title">DELL Latitude E7280, i5 6300U, 8GB RAM, 256GB SSD, 12.5" FHD</div>
+                  <hr>
+                  <div class="product-discount">€239,00</div>
+                  <div class="product-price">€159,00</div>
+                  <div class="addtocart">
+                    <button class="btn-addtocart" onclick="addToCart('DELL Latitude E7280', 159)">
+                      <i class="fa-solid fa-cart-shopping"></i> &nbsp;Shto ne shporte
+                    </button>
+                    <a href="produktet/prod2.html" style="color: white;">  
+                    <button class="btn-learnmore">
+                    <i class="fa-solid fa-eye"></i>
+                    </button></a>
+                  </div>
+                </div>
+                <!-- Product 4 -->
+                <div class="product-card">
+                  <img class="product-image" src="images/p4.png" alt="Product 4">
+                  <div class="product-title">HP OMEN 15, Ryzen 7 4800 H, 16GB RAM, 512GB SSD, GTX 1660 TI 6GB, 15.6" 144Hz</div>
+                  <hr>
+                  <div class="product-discount">€1.349,00</div>
+                  <div class="product-price">€1.199,00</div>
+                  <div class="addtocart">
+                    <button class="btn-addtocart" onclick="addToCart('DELL Latitude E7280', 159)">
+                      <i class="fa-solid fa-cart-shopping"></i> &nbsp;Shto ne shporte
+                    </button>
+                    <a href="produktet/prod4.html" style="color: white;">  
+                    <button class="btn-learnmore">
+                    <i class="fa-solid fa-eye"></i>
+                    </button></a>
+                  </div>
+                </div>
+                <!-- Product 5 -->
+                <div class="product-card">
+                  <img class="product-image" src="images/p5.png" alt="Product 5">
+                  <div class="product-title">HP EliteBook 840 G5, i5 8250U, 8GB RAM, 256GB SSD, 14" FHD</div>
+                  <hr>
+                  <div class="product-discount">€399,00</div>
+                  <div class="product-price">€329,00</div>
+                  <div class="addtocart">
+                    <button class="btn-addtocart" onclick="addToCart('DELL Latitude E7280', 159)">
+                      <i class="fa-solid fa-cart-shopping"></i> &nbsp;Shto ne shporte
+                    </button>
+                    <a href="produktet/prod5.html" style="color: white;">  
+                    <button class="btn-learnmore">
+                    <i class="fa-solid fa-eye"></i>
+                    </button></a>
+                  </div>
+                </div>
+                 <!-- Product 6 -->
+                 <div class="product-card">
+                  <img class="product-image" src="images/p6.png" alt="Product 6">
+                  <div class="product-title">HP EliteBook 1020x360, i5 7300U, 8GB RAM, 256GB SSD, 12.5" FHD</div>
+                  <hr>
+                  <div class="product-discount">€339,00</div>
+                  <div class="product-price">€259,00</div>
+                  <div class="addtocart">
+                    <button class="btn-addtocart" onclick="addToCart('DELL Latitude E7280', 159)">
+                      <i class="fa-solid fa-cart-shopping"></i> &nbsp;Shto ne shporte
+                    </button>
+                    <a href="produktet/prod6.html" style="color: white;">  
+                    <button class="btn-learnmore">
+                    <i class="fa-solid fa-eye"></i>
+                    </button></a>
+                  </div>
+                </div>
+                 <!-- Product 7 -->
+                 <div class="product-card">
+                  <img class="product-image" src="images/p7.png" alt="Product 7">
+                  <div class="product-title">Lenovo ThinkPad Yoga 6, Ryzen 5 5500U, 8GB RAM, 512GB SSD, 13.3" FHD</div>
+                  <hr>
+                  <div class="product-discount">€749,00 </div>
+                  <div class="product-price">€649,00</div>
+                  <div class="addtocart">
+                    <button class="btn-addtocart" onclick="addToCart('DELL Latitude E7280', 159)">
+                      <i class="fa-solid fa-cart-shopping"></i> &nbsp;Shto ne shporte
+                    </button>
+                    <a href="produktet/prod7.html" style="color: white;">  
+                    <button class="btn-learnmore">
+                    <i class="fa-solid fa-eye"></i>
+                    </button></a>
+                  </div>
+                </div>
+                <!-- Product 9 -->
+                <div class="product-card">
+                  <img class="product-image" src="images/p9.png" alt="Product 9">
+                  <div class="product-title">Lenovo ThinkPad Yoga 12 2-in-1, i5 4300U, 8GB RAM, 256GB SSD, 12.5" FHD</div>
+                  <hr>
+                  <div class="product-discount">€279,00</div>
+                  <div class="product-price">€215,00</div>
+                  <div class="addtocart">
+                    <button class="btn-addtocart" onclick="addToCart('DELL Latitude E7280', 159)">
+                      <i class="fa-solid fa-cart-shopping"></i> &nbsp;Shto ne shporte
+                    </button>
+                    <a href="produktet/prod9.html" style="color: white;">  
+                    <button class="btn-learnmore">
+                    <i class="fa-solid fa-eye"></i>
+                    </button></a>
+                  </div>
+                </div>
+                <!-- Product 12 -->
+                <div class="product-card">
+                  <img class="product-image" src="images/p12.png" alt="Product 12">
+                  <div class="product-title">HP OMEN 15, Ryzen 7 5800H, 16GB RAM, 1TB SSD, RTX 3070 8GB, 15.6" 144Hz</div>
+                  <hr>
+                  <div class="product-discount">€1.499,00</div>
+                  <div class="product-price">€1.349,00</div>
+                  <div class="addtocart">
+                    <button class="btn-addtocart" onclick="addToCart('DELL Latitude E7280', 159)">
+                      <i class="fa-solid fa-cart-shopping"></i> &nbsp;Shto ne shporte
+                    </button>
+                    <a href="produktet/prod12.html" style="color: white;">  
+                    <button class="btn-learnmore">
+                    <i class="fa-solid fa-eye"></i>
+                    </button></a>
+                  </div>
+                </div>
+                <!-- Product 15 -->
+                <div class="product-card">
+                  <img class="product-image" src="images/p15.png" alt="Product 15">
+                  <div class="product-title">HP EliteBook 1040 G3, i5 6300U, 8GB RAM, 512GB SSD, 14" FHD</div>
+                  <hr>
+                  <div class="product-discount">€299,00</div>
+                  <div class="product-price">€199,00</div>
+                  <div class="addtocart">
+                    <button class="btn-addtocart" onclick="addToCart('DELL Latitude E7280', 159)">
+                      <i class="fa-solid fa-cart-shopping"></i> &nbsp;Shto ne shporte
+                    </button>
+                    <a href="produktet/prod15.html" style="color: white;">  
+                    <button class="btn-learnmore">
+                    <i class="fa-solid fa-eye"></i>
+                    </button></a>
+                  </div>
+                </div>
+                
+            <!-- PRODUCT --> 
+
               </div>
             </div>
-          </div>
-
-          <container>
-        
-        <!-- PRODUCT END -->  
+  
+          </container>
+          
+          <!-- PRODUCT END --> 
 
         <!-- FOOTER START -->
     <footer>
