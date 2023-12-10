@@ -79,29 +79,26 @@
             <div class="kontakti-right">
                 <h3>Ne jemi ketu per ju!</h3>
                 <p>Plotësoni formularin me çdo pyetje në mendjen tuaj  <br> dhe ne do t'ju kthejmë përgjigje sa më shpejt të jetë e mundur.</p>
+
+                <form id="contactForm" style="padding-left: 0px;" onsubmit="return validateForm()">            
+                    <label for="name">Emri:</label>
+                    <input type="text" id="name" name="name" required>
+            
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+            
+                    <label for="message">Mesazhi:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+            
+                    <button type="submit">Dërgo</button>
+
+                    <div id="successMessage"></div>
+                </form>
+                
             </div>
 
-
         </div>
-        <div class="center">
-           
             
-            <form id="contactForm">
-                <h3 class="center" style="color: white;">Na kontaktoni</h3>
-                <p class="center" style="color: white;">Plotësoni formularin me çdo pyetje në mendjen tuaj dhe ne do t'ju kthejmë përgjigje sa më shpejt të jetë e mundur.</p>
-        
-                <label for="name">Emri:</label>
-                <input type="text" id="name" name="name" required>
-        
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-        
-                <label for="message">Mesazhi:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-        
-                <button type="submit">Dërgo</button>
-            </form>
-        </div>
         <!-- FOOTER START -->
     <footer>
         <div class="ff">
@@ -203,41 +200,24 @@ cartContent.style.display = cartContent.style.display === 'none' ? 'block' : 'no
 }
 </script>
 <script>
-  document.addEventListener("DOMContentLoaded", function() {
-      document.body.classList.add('loaded');
-  });
-   document.addEventListener("DOMContentLoaded", function() {
-        document.getElementById('contactForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent form submission to check validation
+    function validateForm() {
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var message = document.getElementById('message').value;
 
-            // Validate the form
-            if (validateForm()) {
-                // If the form is valid, you can send the data to the server or take further actions
-                alert('Form is valid! Data can be submitted.');
-            }
-        });
-
-        function validateForm() {
-            // Basic validation, you can add more complex validation logic as needed
-            const name = document.getElementById('name').value.trim();
-            const email = document.getElementById('email').value.trim();
-            const message = document.getElementById('message').value.trim();
-
-            if (name === '' || email === '' || message === '') {
-                alert('Please fill in all fields.');
-                return false;
-            }
-
-            // Validate email format
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(email)) {
-                alert('Please enter a valid email address.');
-                return false;
-            }
-
-            return true; // Form is valid
+        if (name.trim() === '' || email.trim() === '' || message.trim() === '') {
+            alert('Ju lutem plotësoni të gjitha fushat.');
+            return false;
         }
-    });
+
+        displaySuccessMessage();
+        return false; 
+    }
+
+    function displaySuccessMessage() {
+        var successMessage = document.getElementById('successMessage');
+        successMessage.innerHTML = 'Mesazhi u dergua me sukses!';
+    }
 </script>
   
 </body>

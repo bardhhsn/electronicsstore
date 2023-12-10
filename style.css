@@ -457,9 +457,8 @@ form {
   padding-right: 30%;
   padding-left: 30%;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 35%;
-  height: 300px;
+  height: 100%;
 }
 
 h1 > form{
@@ -490,7 +489,9 @@ input[type="radio"] {
   margin-right: 8px;
 }
 
-
+.message{
+  height: 100%;
+}
 input[type="submit"] {
   background-color: #4caf50;
   color: #fff;
@@ -592,13 +593,18 @@ h5 {
   height: 20px;
 }
 #contactForm {
-  max-width: 600px;
+  width: auto;
   margin: 0 auto;
+  background-color: transparent;
+  padding: -100px;
 }
 
 #contactForm label {
   display: block;
   margin-bottom: 5px;
+  border: 0;
+  box-shadow: none;
+  border-radius: 0;
 }
 
 #contactForm input,
@@ -620,7 +626,9 @@ h5 {
 #contactForm button:hover {
   background-color: #45a049;
 }
-
+#contactForm label {
+  color: black;
+}
 .kontakti-right {
   text-align: center;
 }
